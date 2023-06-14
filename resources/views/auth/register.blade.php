@@ -16,6 +16,32 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Accesos -->
+        <div class="mt-4">
+            <x-input-label for="access" :value="__('Acceso')" />
+
+            @php
+                $accesos = [
+                    ['id' => '01', 'nombre' => 'Pacientes'],
+                    ['id' => '02', 'nombre' => 'Citas'],
+                    ['id' => '03', 'nombre' => 'Análisis'],
+                    ['id' => '04', 'nombre' => 'Consultas'],
+                    ['id' => '05', 'nombre' => 'Diagnósticos'],
+                    ['id' => '06', 'nombre' => 'Triajes'],
+                    ['id' => '07', 'nombre' => 'Tratamientos'],
+                ];
+            @endphp
+            @foreach ($accesos as $acceso)
+            <label class="inline-flex items-center">
+                <input type="checkbox" name="access[]" value="{{ $acceso['id'] }}" class="form-checkbox h-5 w-5 text-indigo-600">
+                <span class="ml-2">{{  $acceso['nombre'] }}</span>
+            </label> </br>
+            @endforeach
+
+            <x-input-error :messages="$errors->get('access')" class="mt-2" />
+        </div>
+
+
         <!-- Password -->
         <div class="mt-4">
             <x-input-label for="password" :value="__('Contraseña')" />
@@ -39,10 +65,10 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
+        <!--<div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('¿Ya está registrado?') }}
-            </a>
+            </a>-->
 
             <x-primary-button class="ml-4">
                 {{ __('Registrar') }}
