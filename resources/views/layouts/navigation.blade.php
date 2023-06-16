@@ -19,6 +19,25 @@
                     <x-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
                         {{ __('Pacientes') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('citas.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Citas') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('analisis.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Análisis') }}
+                    </x-nav-link>
+                    <!--
+                    <x-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Consultas') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Diagnósticos') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Triajes') }}
+                    </x-nav-link> -->
+                    <x-nav-link :href="route('tratamientos.index')" :active="request()->routeIs('chirps.index')">
+                        {{ __('Tratamientos') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -76,6 +95,24 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
                 {{ __('Pacientes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('citas.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Citas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('analisis.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Análisis') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Consultas') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Diagnósticos') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Triajes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
+                {{ __('Tratamientos') }}
             </x-responsive-nav-link>
         </div>
 
