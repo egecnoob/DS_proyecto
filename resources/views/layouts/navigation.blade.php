@@ -102,6 +102,7 @@
             <x-responsive-nav-link :href="route('analisis.index')" :active="request()->routeIs('chirps.index')">
                 {{ __('Análisis') }}
             </x-responsive-nav-link>
+            <!--
             <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
                 {{ __('Consultas') }}
             </x-responsive-nav-link>
@@ -110,7 +111,7 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
                 {{ __('Triajes') }}
-            </x-responsive-nav-link>
+            </x-responsive-nav-link> -->
             <x-responsive-nav-link :href="route('pacientes.index')" :active="request()->routeIs('chirps.index')">
                 {{ __('Tratamientos') }}
             </x-responsive-nav-link>
