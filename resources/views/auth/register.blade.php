@@ -18,7 +18,7 @@
 
         <!-- Accesos -->
         <div class="mt-4">
-            <x-input-label for="access" :value="__('Acceso')" />
+            <x-input-label :value="__('Acceso')" />
 
             @php
                 $accesos = [
@@ -35,12 +35,11 @@
             <label class="inline-flex items-center">
                 <input type="checkbox" name="access[]" value="{{ $acceso['id'] }}" class="form-checkbox h-5 w-5 text-indigo-600">
                 <span class="ml-2">{{  $acceso['nombre'] }}</span>
-            </label> </br>
+            </label> <br>
             @endforeach
 
             <x-input-error :messages="$errors->get('access')" class="mt-2" />
         </div>
-
 
         <!-- Password -->
         <div class="mt-4">
@@ -65,12 +64,12 @@
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
         </div>
 
-        <!--<div class="flex items-center justify-end mt-4">
+        <div class="flex items-center justify-end mt-4">
             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
                 {{ __('¿Ya está registrado?') }}
-            </a>-->
+            </a>
 
-            <x-primary-button class="m-5">
+            <x-primary-button class="ml-4">
                 {{ __('Registrar') }}
             </x-primary-button>
         </div>
